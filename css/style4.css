@@ -1,0 +1,18 @@
+.title {
+  border: 2px solid #00f;
+  padding-left: 10px;
+  margin: 30px 30px;
+}
+.des {
+  border: 2px solid #aaa;
+  padding-left: 5px;
+  margin: 15px 15px;
+}
+.lista-inicial {
+  border: 2px solid #0f0;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.lista-inicial li {
+  margin: 15px;
+}
