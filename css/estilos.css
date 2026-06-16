@@ -1,0 +1,47 @@
+body {
+  margin: 0;
+  background-color: #ffffff;
+  color: #111111;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.bloque-seccion h1,
+.linea-seccion h2 {
+  margin: 0 0 18px;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.linea-seccion {
+  margin-top: 44px;
+}
+
+.caja {
+  width: 315px;
+  padding: 12px 10px;
+  box-sizing: border-box;
+}
+
+.caja p {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1;
+}
+
+.caja-bloque {
+  display: block;
+  margin-bottom: 14px;
+  border: 1px solid #666666;
+  border-radius: 4px;
+}
+
+.fila-cajas {
+  display: flex;
+  gap: 32px;
+}
+
+.caja-linea {
+  display: inline-block;
+  vertical-align: top;
+  border: 1px dashed #666666;
+}
