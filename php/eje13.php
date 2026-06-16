@@ -2,18 +2,18 @@
 
 class Celda
 {
-    private int $numero;
+    private int $nro;
     private string $texto;
 
-    public function __construct(int $numero, string $texto)
+    public function __construct(int $nro, string $texto)
     {
-        $this->numero = $numero;
+        $this->nro = $nro;
         $this->texto = $texto;
     }
 
-    public function getNumero(): int
+    public function getNro(): int
     {
-        return $this->numero;
+        return $this->nro;
     }
 
     public function getTexto(): string
@@ -26,24 +26,19 @@ class Tabla
 {
     private array $celdas = [];
 
-    public function __construct()
+    public function add(Celda $celda): void
     {
-        for ($i = 0; $i < 10; $i++) {
-            $this->celdas[] = new Celda($i, "Texto celda $i");
-        }
+        $this->celdas[] = $celda;
     }
 
-    public function mostrarTabla(): void
+    public function mostrarCeldas(): void
     {
         echo "<h2>Tabla de una columna y varias filas</h2>";
-
         echo "<table border='1' cellpadding='8' cellspacing='0'>";
 
         foreach ($this->celdas as $celda) {
             echo "<tr>";
-            echo "<td>";
-            echo "Celda nro " . $celda->getNumero() . ": " . $celda->getTexto();
-            echo "</td>";
+            echo "<td>Celda nro " . $celda->getNro() . ": " . $celda->getTexto() . "</td>";
             echo "</tr>";
         }
 
@@ -52,6 +47,12 @@ class Tabla
 }
 
 $tabla = new Tabla();
-$tabla->mostrarTabla();
+
+for ($i = 0; $i < 10; $i++) {
+    $celda = new Celda($i, "Texto celda $i");
+    $tabla->add($celda);
+}
+
+$tabla->mostrarCeldas();
 
 ?>
